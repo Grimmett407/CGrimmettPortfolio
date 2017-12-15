@@ -1,0 +1,88 @@
+﻿@using Microsoft.AspNet.Identity;
+@model CGrimmettPortfolio.Models.Post
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "/Views/Shared/_Layout - Copy (2).cshtml";
+}
+
+<div class="inner text-center">
+    <h1 class="cursive">@Model.Title</h1>
+    <hr />
+</div>
+<section>
+    <div class="grid-container text-center">
+        <div class="grid-100">
+
+            <div class="grid-50">
+                <img src="@Model.Media" class="img-responsive center-block" />
+            </div>
+            <div class="grid-50">
+                <div class="blogbody">
+                    @Html.Raw(Model.Body)
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<p class="text-center">
+    @if (User.IsInRole("Admin"))
+    {                 //Dispayed //Command name
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) <span>|</span>
+        @Html.ActionLink("Delete", "Delete", new { id = Model.Id }) <span>|</span>
+    }
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+<!------------Comment Code----------------->
+
+<div class="grid-container">
+    <div class="grid-100">
+        <h2 class="text-center">Comments</h2>
+        <hr />
+        @if (User.Identity.IsAuthenticated)
+         {
+            <h5>Leave a Comment</h5>
+            using (Html.BeginForm("CommentCreate", "Posts", FormMethod.Post, new { enctype = "Multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <input type="number" name="PostId" value="@Model.Id" hidden />
+                <div style="padding-bottom:15px;">
+                    <textarea type="text" name="Body" rows="6" class="form-control" required placeholder="Add a comment..."></textarea>
+                </div>
+                <div>
+                    <input class="btn btn-default" type="submit" value="Share" />
+                </div>
+        <br />
+            }
+        }
+        else
+        {
+            @ViewBag.Login;
+        }
+
+        @foreach (var comment in Model.Comments)
+        {
+            if (comment != null)
+            {
+                <div class="grid-100">
+                    <div class="grid-45 well comText">
+                        <div class="post-meta comHead">@Html.DisplayFor(modelcomment => comment.Author.DisplayName)</div>
+                        <div class="post-meta">@Html.DisplayFor(modelcomment => comment.Body)</div>
+                        <div class="post-meta pull-right">@comment.CreationDate.ToString("d")</div>
+
+                        @if (User.IsInRole("Admin") || User.IsInRole("Moderator") || User.Identity.GetUserId() == comment.AuthorId) // author id and user id is going to be the same number
+                    {
+                            <div>
+                                @Html.ActionLink("Edit", "Edit", "Comments", new { id = comment.Id }, null) <span> | </span>
+                                @Html.ActionLink("Delete", "Delete", "Comments", new { id = comment.Id }, null)
+                            </div>
+
+                        }
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>

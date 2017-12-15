@@ -10,6 +10,7 @@ using CGrimmettPortfolio.Models;
 
 namespace CGrimmettPortfolio.Controllers
 {
+    [RequireHttps]
     [Authorize]
     public class ManageController : Controller
     {

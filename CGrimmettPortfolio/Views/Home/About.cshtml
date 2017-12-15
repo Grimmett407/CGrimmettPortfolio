@@ -1,7 +1,137 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+
+<div class="header1">
+    <div class="header-content">
+        <div class="inner">
+            <h1 class="cursive">Blog</h1>
+            <h3>Register. Subcribe. Leave a review.</h3>
+            <div class="center-block">
+                <a href="https://www.linkedin.com/in/nicholas-grimmett-68b547121/" target="_blank" style="text-decoration:none;">
+                    <i class="icon-lg icon-linkedin-with-circle" style="color:cornflowerblue; text-decoration:none;"></i>
+                </a>
+            </div>
+            <hr />
+        </div>
+    </div>
+</div>
+
+<section id="three" class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="text-primary">Weekly blog at Coder Foundry</h2>
+                <hr class="primary">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row no-gutter">
+            <div class="col-lg-4 col-sm-6">
+                <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="/template/assets/New Imgs/thaddaeus-lim-40018.jpg">
+                    <img src="~/template/assets/New Imgs/thaddaeus-lim-40018.jpg" class="img-responsive" alt="Image 1">
+                    <div class="gallery-box-caption">
+                        <div class="gallery-box-content">
+                            <div>
+                                <i class="lead">Week 2</i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="/template/assets/New Imgs/taylor-durrer-114005.jpg">
+                    <img src="/template/assets/New Imgs/taylor-durrer-114005.jpg" class="img-responsive" alt="Image 2">
+                    <div class="gallery-box-caption">
+                        <div class="gallery-box-content">
+                            <div>
+                                <i class="lead">Week 3</i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="clearfix hidden-lg"> </div>
+            <div class="col-lg-4 col-sm-6">
+                <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="/template/assets/New Imgs/cliff-johnson-20686.jpg">
+                    <img src="/template/assets/New Imgs/cliff-johnson-20686.jpg" class="img-responsive" alt="Image 3">
+                    <div class="gallery-box-caption">
+                        <div class="gallery-box-content">
+                            <div>
+                                <i class="lead">Week 4</i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="/template/assets/New Imgs/patrick-fore-381200.jpg">
+                    <img src="/template/assets/New Imgs/patrick-fore-381200.jpg" class="img-responsive" alt="Image 4">
+                    <div class="gallery-box-caption">
+                        <div class="gallery-box-content">
+                            <div>
+                                <i class="lead">Week 5</i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="clearfix hidden-lg"> </div>
+            <div class="col-lg-4 col-sm-6">
+                <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="/template/assets/New Imgs/stefan-stefancik-105374.jpg">
+                    <img src="/template/assets/New Imgs/stefan-stefancik-105374.jpg" class="img-responsive" alt="Image 5">
+                    <div class="gallery-box-caption">
+                        <div class="gallery-box-content">
+                            <div>
+                                <i class="lead">Week 6</i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="/template/assets/New Imgs/brandon-morgan-15365.jpg">
+                    <img src="/template/assets/New Imgs/brandon-morgan-15365.jpg" class="img-responsive" alt="Image 6">
+                    <div class="gallery-box-caption">
+                        <div class="gallery-box-content">
+                            <div>
+                                <i class="lead">Week 7</i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<aside class="bg-dark">
+    <div class="container text-center">
+        <div class="call-to-action">
+            <h2 class="text-primary">Get in contact with me.</h2>
+            <a href="@Url.Action("Contact", "Home")" class="btn btn-default btn-lg wow flipInX">Contact Me</a>
+        </div>
+        <br>
+        <hr />
+        <br>
+    </div>
+</aside>
+
+
+<!----------Modals------------>
+
+<div id="galleryModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="left:auto;">
+        <div class="modal-content bg-dark">
+            <div class="modal-body">
+                <img src="" id="galleryImage" class="img-responsive" />
+                <p>
+                    <br />
+                    <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true">Close <i class="ion-android-close"></i></button>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

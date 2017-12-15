@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Alphabetical Order</h1>
+    <p><input id="testWord" type="text" placeholder="Enter Word" /></p>
+    <p><button class="btn btn-primary" onclick="alphaFunc(testWord.value)">Execute</button></p>
+    <div id="AlphaResult"></div>
+
+
+
+    <script>
+        function alphaFunc(str) {
+            var str = document.getElementById("testWord").value;
+            var alphabetCheck = str.split('').sort().join('');
+            var result = alphabetCheck;
+            document.getElementById("AlphaResult").innerHTML = result;
+        }
+    </script>
+
+
+    <script src="scripts/jquery-1.9.1.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+</body>
+</html>

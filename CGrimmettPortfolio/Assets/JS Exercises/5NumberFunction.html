@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div class="text-center">
+            <h1>5 Number Function</h1>
+        <p><input id="numero uno" type="number" placeholder="Enter first number" /></p>
+        <p><input id="numero dos" type="number" placeholder="Enter second number" /></p>
+        <p><input id="numero tres" type="number" placeholder="Enter third number" /></p>
+        <p><input id="numero quatro" type="number" placeholder="Enter fourth number" /></p>
+        <p><input id="numero cinco" type="number" placeholder="Enter fifth number" /></p>
+        <button class="btn-danger" onclick="numCalc()">Execute</button>
+
+
+        <div id="Result1">Sum</div>
+        <div id="Result2">Mean</div>
+        <div id="Result3">Product</div>
+        <div id="Result4">Least</div>
+        <div id="Result5">Most</div>
+    </div>
+
+
+
+    <script>
+
+        function numCalc() {
+            var firstNum = Number(document.getElementById("numero uno").value);
+            var secondNum = Number(document.getElementById("numero dos").value);
+            var thirdNum = Number(document.getElementById("numero tres").value);
+            var fourthNum = Number(document.getElementById("numero quatro").value);
+            var fifthNum = Number(document.getElementById("numero cinco").value);
+            var resultOne = firstNum + secondNum + thirdNum + fourthNum + fifthNum;
+            document.getElementById("Result1").innerHTML = resultOne;
+
+            var resultTwo = firstNum + secondNum + thirdNum + fourthNum + fifthNum / 5;
+            document.getElementById("Result2").innerHTML = resultTwo;
+
+            var resultThree = firstNum * secondNum * thirdNum * fourthNum * fifthNum;
+            document.getElementById("Result3").innerHTML = resultThree;
+            document.getElementById("Result4").innerHTML = Math.min(firstNum, secondNum, thirdNum, fourthNum, fifthNum);
+            document.getElementById("Result5").innerHTML = Math.max(firstNum, secondNum, thirdNum, fourthNum, fifthNum);
+        }
+
+    </script>
+
+
+
+
+    <script src="scripts/jquery-1.9.1.js"></script>
+    <script src="JavaScript/JavaScript.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body style="text-align:center; font-family:Dubai; font-weight:bold;" >
+
+    <h1>CF Week 2 Assessment</h1>
+    <p><input id="number1" type="number" placeholder="Enter Number" /></p>
+    <p><input id="number2" type="number" placeholder="Enter Number" /></p>
+    <p><input id="number3" type="number" placeholder="Enter Number" /></p>
+    <p><button class="btn btn-danger" onclick="numDisplay()">Execute</button></p>
+    <div id="result1"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+
+
+
+    <script>
+        function numDisplay() {
+            var firstNumber = Number(document.getElementById("number1").value);
+            var secondNumber = Number(document.getElementById("number2").value);
+            var thirdNumber = Number(document.getElementById("number3").value);
+
+
+
+            var result1 = document.getElementById("result1").innerHTML = result1 = ("Brandon " + " has ") + firstNumber + (" apples" + ". ") +
+             ("Christian " + " has ") + secondNumber + (" apples" + ". ") + ("Monty " + " has ") + thirdNumber + (" apples" + ".");
+
+            var result2 = ((firstNumber + secondNumber - thirdNumber) * secondNumber);
+            document.getElementById("result2").innerHTML = result2;
+
+
+            var result3 = " ";
+            for (var i = 0; i <= secondNumber; i++)
+                if ( i % 2 == 0) {
+                    result3 += i+ " ";
+                }
+            else {
+                result3 += (" odd! ");
+            }
+            document.getElementById("result3").innerHTML = result3;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+    <script src="scripts/jquery-1.9.1.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+</body>
+</html>

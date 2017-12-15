@@ -1,0 +1,64 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model IPagedList<CGrimmettPortfolio.Models.Post>
+
+
+@{
+    ViewBag.Title = "SearchResult";
+    Layout = "/Views/Shared/_Layout - Copy (2).cshtml";
+}
+
+<div class="header1" style="padding-bottom:60px;">
+    <div class="header-content">
+        <div class="inner">
+            <h1 class="cursive blogHeader">Blog Search</h1>
+            <hr />
+            @*<div class="center-block">
+                    <a href="https://www.linkedin.com/in/nicholas-grimmett-68b547121/" target="_blank" style="text-decoration:none;">
+                        <i class="icon-lg icon-linkedin-with-circle" style="color:cornflowerblue; text-decoration:none;"></i>
+                    </a>
+                </div>*@
+        </div>
+    </div>
+</div>
+
+
+
+<div class="grid-100 text-center">
+    <hr /><h3 class="sectionWidth">Your Search For:  @ViewBag.Search</h3><hr />
+    <div class="container-fluid">
+        @Html.ActionLink("Back to List", "Index")
+        <div class="row">
+            @foreach (var post in Model)
+            {
+                <div class="grid-50">
+                    <h3>@post.Title</h3>
+                    <a href="@Url.Action("Details", new { slug = post.Slug })" class="gallery-box">
+                        <img src="@post.Media" class="img-responsive center-block" />
+                        <div class="gallery-box-caption">
+                            <div class="gallery-box-content">
+                                <div>
+                                    <i class="lead">@post.Title</i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </a>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" style="padding-top:60px;">
+    <div class="text-center">
+        <p>@Html.ActionLink("Back to List", "Index")</p>
+
+        <p>
+            Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+        </p>
+    </div>
+</div>
+

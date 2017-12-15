@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <h1>Factorial</h1>
+    <p><input id="intNum" type="number" placeholder="Enter Number" /></p>
+    <p><button onclick="numCal()">Execute</button></p>
+
+    <div id="result">Result</div>
+
+    <script>
+
+        
+        function numCal() {
+            var x = Number(document.getElementById("intNum").value);
+            var y = 1;
+            for (i = x; i >= 1; i--)
+                y = y * i;
+            if (x === 0) {
+                y = 1;
+            }
+
+            document.getElementById("result").innerHTML = y;
+        }
+    </script>
+    <script src="scripts/jquery-1.9.1.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+
+    <!--If our input number is greater than or equal to 1, the number decrements by a value of one each time until it reaches 1. 
+        if our input number is less than or equal to 1, the program spits out 1 automatically.-->
+    
+</body>
+</html>

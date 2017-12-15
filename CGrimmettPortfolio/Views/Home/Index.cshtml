@@ -1,31 +1,696 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Christian Grimmett";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+
+<!------Start Head------->
+<header id="first">
+    <div class="header-content">
+        <div class="inner">
+            <h1 class="cursive wow fadeIn">N. Christian Grimmett</h1>
+            <h3 class="fadeIn">Full Stack .Net Developer</h3>
+            <div class="center-block">
+                <a href="https://www.linkedin.com/in/nicholas-grimmett-68b547121/" target="_blank" style="text-decoration:none;">
+                    <i class="icon-lg icon-linkedin-with-circle wow fadeIn" style="color:cornflowerblue; text-decoration:none;"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-------Video Background if needed-->
+@*<video autoplay="" loop="" class="fillWidth fadeIn wow collapse in" data-wow-delay="0.5s" poster="https://s3-us-west-2.amazonaws.com/coverr/poster/Traffic-blurred2.jpg" id="video-background">
+        <source src="https://s3-us-west-2.amazonaws.com/coverr/mp4/Traffic-blurred2.mp4" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser.
+    </video>*@
+
+
+<!-------------Bio----------------->
+
+<section class="bg-primary" id="one">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="margin-top-0 text-primary">About Me</h2>
+                <hr class="primary" style="padding-bottom:25px;">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="grid-50 text-center suffix-10">
+                <a href="https://www.linkedin.com/in/nicholas-grimmett-68b547121/"><img src="/template/assets/Me Revised.jpg" class="img-responsive center-block" /></a>
+            </div>
+            <div class="grid-40 text-center">
+                <h1 class="margin-top-0 text-primary">Design. Develop. Code.</h1>
+                <h3 class="text-faded">Developing your vision.</h3>
+                <hr class="primary">
+                <p>
+                    Hello! I am Christian Grimmett, a full stack .Net developer and application designer. Coming from a long history
+                    of hardwork and dedication to any craft I set out to learn, development and design have been no different. I've worked
+                    hard at becoming knowledgable and proficient in coding. After high school I spent 6 years in the U.S. Army, being in
+                    the military taught me leadership, hardwork and discipline amongst many other positive traits and abilities. I set myself
+                    out to continue to further my knowledge and abilities as a developer and as a professional to become the best commodity
+                    to any company or project.
+                </p>
+                <hr class="primary">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="two">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="margin-top-0 text-primary">Languages Experienced</h2>
+                <hr class="primary">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="grid-33 text-center">
+                <div class="feature">
+                    <img src="/template/assets/Csharp1.png" class="img-responsive center-block wow fadeIn" data-wow-delay=".3s" />
+                    <h3>C#</h3>
+                </div>
+            </div>
+            <div class="grid-33 text-center">
+                <div class="feature">
+                    <i class="icon-lg ion-social-javascript-outline wow 
+                       Up" data-wow-delay=".2s"></i>
+                    <h3>JavaScript</h3>
+                </div>
+            </div>
+            <div class="grid-33 text-center">
+                <div class="feature">
+                    <i class="icon-lg icon-html-five wow fadeIn" data-wow-delay=".3s"></i>
+                    <h3 style="padding-top:6px">Html5</h3>
+                </div>
+            </div>
+        </div>
+            <div class="row">
+                <div class="grid-33 text-center">
+                    <div class="feature">
+                        <img src="/template/assets/bootstrap (4).png" data-wow-delay=".3s" class="img-responsive center-block wow fadeIn" style="padding-top:10px" />
+                        <h3 style="padding-top:1px">Bootstrap</h3>
+                    </div>
+                </div>
+                <div class="grid-33 text-center">
+                    <div class="feature">
+                        <i class="icon-lg ion-social-css3-outline wow fadeIn" data-wow-delay=".3s"></i>
+                        <h3>CSS3</h3>
+                    </div>
+                </div>
+                <div class="grid-33 text-center">
+                    <div class="feature">
+                        <img src="/template/assets/SQL Grey.png" data-wow-delay=".3s" class="img-responsive center-block wow fadeIn" />
+                        <h3 style="padding-top:6px">SQl</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<!-------------Porfolio--------------->
+
+<section id="three" class="no-padding">
+    <div class="container">
+        <div class="row">
+            <div class="grid-100 text-center">
+                <h2 class="margin-top-0 text-primary">Portfolio</h2>
+                <hr class="primary">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row no-gutter">
+            <div class="col-lg-4 col-sm-6" style="padding:0;">
+                <a href="#aboutModal" class="gallery-box" data-toggle="modal" @*data-src="/template/assets/blake-connally-373084.jpg"*@>
+                    <img src="/template/assets/blake-connally-373084.jpg" class="img-responsive" alt="Image 1">
+                    <div class="gallery-box-caption">
+                        <div class="gallery-box-content">
+                            <div>
+                                <i class="lead">JavaScript Exercises</i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6" style="padding:0;">
+                <a href="http://cgrimmett-bugtracker.azurewebsites.net/" class="gallery-box">
+                    <img src="/template/assets/patrick-lindenberg-191841.jpg" class="img-responsive" alt="Image 2">
+                    <div class="gallery-box-caption">
+                        <div class="gallery-box-content">
+                            <div>
+                                <i class="lead">Bug Tracker</i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="clearfix hidden-lg"> </div>
+            <div class="col-lg-4 col-sm-6" style="padding:0;">
+                <a href="@Url.Action("Index", "Posts")" class="gallery-box" @*data-toggle="modal" data-src="/template/assets/tanja-heffner-196111.jpg"*@>
+                    <img src="/template/assets/tanja-heffner-196111.jpg" class="img-responsive" alt="Image 3">
+                    <div class="gallery-box-caption">
+                        <div class="gallery-box-content">
+                            <div>
+                                <i class="lead">Blog</i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="grid-33 tablet-grid-50" style="padding:0;">
+                <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="/template/assets/sergey-zolkin-192937.jpg">
+                    <img src="/template/assets/sergey-zolkin-192937.jpg" class="img-responsive" alt="Image 4">
+                    <div class="gallery-box-caption">
+                        <div class="gallery-box-content">
+                            <div>
+                                <i class="lead">Budget System</i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="clearfix hidden-lg"> </div>
+            <div class="grid-33 tablet-grid-50" style="padding:0;">
+                <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="/template/assets/moss-334062 Revised.jpg">
+                    <img src="/template/assets/moss-334062 Revised.jpg" class="img-responsive" alt="Image 5">
+                    <div class="gallery-box-caption">
+                        <div class="gallery-box-content">
+                            <div>
+                                <i class="lead">Car Finder</i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="grid-33 tablet-grid-50" style="padding:0;">
+                <a href="http://cgrimmett-shopping.azurewebsites.net/" class="gallery-box" data-toggle="modal" data-src="/template/assets/christopher-gower-291246.jpg">
+                    <img src="/template/assets/christopher-gower-291246.jpg" class="img-responsive" alt="Image 6">
+                    <div class="gallery-box-caption">
+                        <div class="gallery-box-content">
+                            <div>
+                                <i class="icon-shopping-cart lead"> Ecommerce site</i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-----------Contact Section--------------->
+
+<aside class="bg-dark">
+    <div class="container text-center">
+        <br>
+        <hr />
+        <br>
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <div class="row">
+                    <h6 class="wide-space text-center">Made possible by</h6>
+                    <div class="grid-100 center-block">
+                        <img src="/template/assets/CF3.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr />
+        <br>
+    </div>
+</aside>
+
+<!---------------Modals--------------->
+
+<div id="galleryModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="left:auto;">
+        <div class="modal-content bg-dark">
+            <div class="modal-body">
+                <img src="" id="galleryImage" class="img-responsive" />
+                <p>
+                    <br />
+                    <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true">Close <i class="ion-android-close"></i></button>
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+<!--------About Modal--------->
+<div id="aboutModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modalLeft modal-dialog modal-lg" style="left:auto;">
+        <div class="modal-content">
+            <div class="modal-body bg-dark">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" style="color:white;">×</button>
+                    <h3 class="text-primary">JavaScript Exercises</h3>
+                </div>
+                <div class="modal-body bg-dark">
+                    <ul class="nav nav-tabs" id="tabContent">
+                        <li class="active"><a href="#arithmetics" data-toggle="tab">Arithmetics</a></li>
+                        <li><a href="#primenumber" data-toggle="tab">Prime Number</a></li>
+                        <li><a href="#factorial" data-toggle="tab">Factorial</a></li>
+                        <li><a href="#calculator" data-toggle="tab">FizzBuzz</a></li>
+                        <li><a href="#reverseString" data-toggle="tab">Reverse String</a></li>
+                    </ul>
+
+                    <!--------Addition Modal--------->
+
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="arithmetics">
+                            <div class="row">
+                                <div class="grid-33">
+                                    <div class="panel bg-dark">
+                                        <div class="form-group">
+                                            <h2 class="text-center">5 Number Function</h2>
+                                            <hr class="primary" />
+                                            <p>This function will take the five numbers you input and
+                                            give you the Sum, Mean, Product, Lowest and Highest values
+                                            on execution.</p>
+                                            <input class="form-control" id="numero uno" type="number" style="margin-bottom:10px;" placeholder="Enter first number" />
+                                            <input class="form-control" id="numero dos" type="number" style="margin-bottom:10px;" placeholder="Enter second number" />
+                                            <input class="form-control" id="numero tres" type="number" style="margin-bottom:10px;" placeholder="Enter third number" />
+                                            <input class="form-control" id="numero quatro" type="number" style="margin-bottom:10px;" placeholder="Enter fourth number" />
+                                            <input class="form-control" id="numero cinco" type="number" style="margin-bottom:10px;" placeholder="Enter fifth number" />
+                                            <button class="btn btn-primary" onclick="numCalc()">Execute</button>
+
+
+                                            <div id="Result1">Sum</div>
+                                            <div id="Result2">Mean</div>
+                                            <div id="Result3">Product</div>
+                                            <div id="Result4">Least</div>
+                                            <div id="Result5">Most</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    function numCalc() {
+                                        var firstNum = Number(document.getElementById("numero uno").value);
+                                        var secondNum = Number(document.getElementById("numero dos").value);
+                                        var thirdNum = Number(document.getElementById("numero tres").value);
+                                        var fourthNum = Number(document.getElementById("numero quatro").value);
+                                        var fifthNum = Number(document.getElementById("numero cinco").value);
+                                        var resOne = firstNum + secondNum + thirdNum + fourthNum + fifthNum;
+                                        document.getElementById("Result1").innerHTML = resOne;
+
+                                        var resTwo = firstNum + secondNum + thirdNum + fourthNum + fifthNum / 5;
+                                        document.getElementById("Result2").innerHTML = resTwo;
+
+                                        var resThree = firstNum * secondNum * thirdNum * fourthNum * fifthNum;
+                                        document.getElementById("Result3").innerHTML = resThree;
+                                        document.getElementById("Result4").innerHTML = Math.min(firstNum,
+                                            secondNum, thirdNum, fourthNum, fifthNum);
+                                        document.getElementById("Result5").innerHTML = Math.max(firstNum,
+                                            secondNum, thirdNum, fourthNum, fifthNum);
+                                    }
+                                </script>
+                                <div class="grid-66">
+                                    <pre class="brush: js">
+function numCalc() {
+   var firstNum = Number(document.getElementById("numero uno").value);
+   var secondNum = Number(document.getElementById("numero dos").value);
+   var thirdNum = Number(document.getElementById("numero tres").value);
+   var fourNum = Number(document.getElementById("numero quatro").value);
+   var fifthNum = Number(document.getElementById("numero cinco").value);
+   //Sum
+   var resOne = firstNum + secondNum + thirdNum + fourNum + fifthNum;
+   document.getElementById("Result1").innerHTML = resOne;
+   //Mean
+   var resTwo = firstNum + secondNum + thirdNum + fourNum + fifthNum / 5;
+   document.getElementById("Result2").innerHTML = resTwo;
+   //product
+   var resThree = firstNum * secondNum * thirdNum * fourNum * fifthNum;
+   document.getElementById("Result3").innerHTML = resThree;
+   //Min
+   document.getElementById("Result4").innerHTML = Math.min(firstNum, 
+        secondNum, thirdNum, fourNum, fifthNum);
+   //Max
+   document.getElementById("Result5").innerHTML = Math.max(firstNum, 
+        secondNum, thirdNum, fourNum, fifthNum);
+   }
+                                        </pre>
+                                </div>
+                            </div> 
+                        </div>
+ <!----------FizzBuzz Modal----------------->
+                        <div class="tab-pane" id="calculator">
+                            <div class="row">
+                                <div class="grid-33">
+                                    <div class="panel bg-dark">
+                                        <div class="form-group">
+                                            <h2 class="text-center">FizzBuzzin'</h2>
+                                            <hr class="primary" />
+                                            <p>This exercise will take the two numbers you intput (1-100) 
+                                            and for every number divisable by the first input it will display
+                                            "Fizz" and for the second it will display "Buzz" if the number is
+                                            divisable by both it will display "FizzBuzz!"</p>
+                                            <input class="form-control"  id="numEntry1" type="number" style="margin-bottom:10px;" placeholder="Enter Number" />
+                                            <input class="form-control" id="numEntry2" type="number" style="margin-bottom:10px;" placeholder="Enter Number" />
+                                            <button class="btn btn-primary" id="add" onclick="fizzBuzz()">Execute</button>
+                                            <p id="fizResult">The result of addition will display here!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    function fizzBuzz() {
+                                        var firstNum = Number(document.getElementById("numEntry1").value);
+                                        var secondNum = Number(document.getElementById("numEntry2").value);
+                                        var result = " ";
+                                        for (var i = 1; i <= 100; i++) {
+                                            if (firstNum <= 0 || secondNum <= 0) {
+                                                result = ("One of the numbers you entered is less than 1, please enter a number 1-100");
+                                            }
+                                            else if (firstNum > 100 || secondNum > 100) {
+                                                result = ("One of the numbers you entered is greater than 100, please enter a number 1-100");
+                                            }
+                                            else if (firstNum == null || secondNum == null) {
+                                                result = ("Oops! You forgot to enter one or both of the numbers needed for the demonstration! Please enter both valid numbers");
+                                            }
+                                            else if (firstNum == NaN || secondNum == NaN) {
+                                                result = ("Oops! You entered a charcter other than a number, please enter a number 1-100")
+                                            }
+                                            else if ((i % firstNum) == 0 && (i % secondNum) == 0) {
+                                                result += (" FizzBuzz! ");
+                                            }
+                                            else if ((i % firstNum) == 0) {
+                                                result += (" Fizz ")
+                                            }
+                                            else if ((i % secondNum) == 0) {
+                                                result += (" Buzz ")
+                                            }
+                                            else {
+                                                result += i + " ";
+                                            }
+                                        }
+                                        document.getElementById("fizResult").innerHTML = result;
+                                    }
+                                </script>
+                                <div class="grid-66">
+                                    <pre class="brush: js">
+ function fizzBuzz() {
+ var firstNum = Number(document.getElementById("numEntry1").value);
+ var secondNum = Number(document.getElementById("numEntry2").value);
+ var result = " ";
+ for (var i = 1; i <= 100; i++) {
+      if (firstNum <= 0 || secondNum <= 0) {
+          result = ("One of the numbers you entered is less than 1, 
+          please enter a number 1-100");
+      }
+      else if (firstNum > 100 || secondNum > 100) {
+          result = ("One of the numbers you entered is greater than 100, 
+          please enter a number 1-100");
+      }
+      else if (firstNum == null || secondNum == null) {
+          result = ("Oops! You forgot to enter one or both of the numbers 
+          needed for the demonstration! Please enter 2 valid numbers");
+      }
+      else if (firstNum == NaN || secondNum == NaN) {
+          result = ("Oops! You entered a charcter other than a number, 
+          please enter a number 1-100")
+      }
+      else if ((i % firstNum) == 0 && (i % secondNum) == 0) {
+          result += (" FizzBuzz! ");
+      }
+      else if ((i % firstNum) == 0) {
+          result += (" Fizz ")
+      }
+      else if ((i % secondNum) == 0) {
+          result += (" Buzz ")
+      }
+      else {
+          result += i + " ";
+      }
+   }
+     document.getElementById("fizResult").innerHTML = result;
+}
+                                        </pre>
+                                </div>
+                            </div>
+                        </div>
+
+<!---------Prime Modal---------------->
+
+                        <div class="tab-pane" id="primenumber">
+                            <div class="row">
+                                <div class="grid-33">
+                                    <div class="panel bg-dark">
+                                        <div class="form-group">
+                                            <h3 class="text-center">Prime Number Check</h3>
+                                            <hr class="primary" />
+                                            <input class="form-control" id="prime" type="number" style="margin-bottom:10px;" placeholder="Enter Number" />
+                                            <button class="btn btn-primary" id="prime" type="submit" onclick="primeNum()">Test</button>
+                                            <p id="primeresult">The result of the prime check will appear here!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    function primeNum() {
+                                        var primeNum = Number(document.getElementById("prime").value);
+                                        var isprime = [];
+                                        for (i = 2; i < primeNum; i++) {
+                                            if (primeNum % i == 0) {
+                                                isprime.push(false);
+                                            }
+                                            else {
+                                                isprime.push(true);
+                                            }
+                                        }
+                                        if (isprime.includes(false)) {
+                                            document.getElementById("primeresult").innerHTML = primeNum + " is NOT prime number";
+                                        }
+                                        else {
+                                            document.getElementById("primeresult").innerHTML = primeNum + " IS a prime number";
+                                        }
+                                    }
+                                </script>
+                                <div class="grid-66">
+                                    <pre class="brush: js">
+function primeNum() {
+    var primeNum = Number(document.getElementById("prime").value);
+    var isprime = [];
+    for (i = 2; i < primeNum; i++) {
+        if (primeNum % i == 0) {
+            isprime.push(false);
+        }
+        else {
+            isprime.push(true);
+        }
+    }
+        if (isprime.includes(false)) {
+            document.getElementById("primeresult").innerHTML = primeNum + " is NOT prime number";
+        }
+        else {
+            document.getElementById("primeresult").innerHTML = primeNum + " IS a prime number";
+        }
+}
+                                        </pre>
+                                </div>
+                            </div>
+                        </div>
+
+
+<!--------Factorial Modal------------->
+
+                        <div class="tab-pane" id="factorial">
+                            <div class="row">
+                                <div class="grid-33">
+                                    <div class="panel bg-dark">
+                                        <div class="form-group">
+                                            <h2 class="text-center">Factorial</h2>
+                                            <hr class="primary" />
+                                            <input class="form-control" id="intNum" type="number" style="margin-bottom:10px;" placeholder="Enter Number" />
+                                            <button class="btn btn-primary" id="add" onclick="numCal()">Execute</button>
+                                            <p id="factresult">The result will display here!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    function numCal() {
+                                        var x = Number(document.getElementById("intNum").value);
+                                        var y = 1;
+                                        for (i = x; i >= 1; i--)
+                                            y = y * i;
+                                        if (x === 0) {
+                                            y = 1;
+                                        }
+
+                                        document.getElementById("factresult").innerHTML = y;
+                                    }
+                                </script>
+                                <div class="grid-66">
+                                    <pre class="brush: js">
+function numCal() {
+    var x = Number(document.getElementById("intNum").value);
+    var y = 1;
+    for (i = x; i >= 1; i--)
+        y = y * i;
+    if (x === 0) {
+        y = 1;
+     }
+
+    document.getElementById("result").innerHTML = y;
+ }
+                                        </pre>
+                                </div>
+                            </div>
+                        </div>
+
+  <!--------Reverse String Modal------------->
+
+                        <div class="tab-pane" id="reverseString">
+                            <div class="row">
+                                <div class="grid-33">
+                                    <div class="panel bg-dark">
+                                        <div class="form-group">
+                                            <h3 class="text-center">Reverse String inBuilt</h3>
+                                            <input class="form-control" id="testWord" type="text" style="margin-bottom:10px;" placeholder="Enter text" />
+                                            <button class="btn btn-primary" id="reverse" onclick="reverseString()">Execute</button>
+                                            <p id="revResult">The result will display here!</p>
+                                        </div>
+                                        <hr class="primary">
+                                        <div>
+                                            <h3>Reverse String Loop</h3>
+                                            <input class="form-control" id="testword1" type="text" style="margin-bottom:10px;" placeholder="Enter text" />
+                                            <button class="btn btn-primary" id="reverseLoop" onclick="revString()">Execute</button>
+                                            <p id="revResult1">The result will display here!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    //inBuilt code for reversal....
+
+                                    function reverseString() {
+                                        var testWord = document.getElementById("testWord").value;
+                                        var result = testWord.split("").reverse().join("");
+                                        document.getElementById("revResult").innerHTML = result;
+                                    }
+
+                                    //Code for reversal loop....
+
+                                    function revString() {
+                                        var testword = document.getElementById("testword1").value;
+                                        var testWord1 = testword.replace(/[^A-Za-z0-9]/ig, "");
+                                        var result1 = "";
+                                        for (i = (testWord1.length) - 1; i >= 0; i--) {
+                                            result1 += testword[i];
+                                        }
+                                        document.getElementById("revResult1").innerHTML = result1;
+                                    }
+                                </script>
+                                <div class="grid-66">
+                                    <pre class="brush: js">
+//inBuilt function code for reversal....
+
+function reverseString() {
+    var testWord = document.getElementById("testWord").value;
+    var result = testWord.split("").reverse().join("");
+    document.getElementById("revResult").innerHTML = result;
+        }
+
+//Code for reversal loop....
+
+function revString() {
+    var testword = document.getElementById("testword").value;
+    var testWord = testword.replace(/[^A-Za-z0-9]/ig, "");
+    var result1 = "";
+    for (i = (testWord.length) - 1; i >= 0; i--) {
+        result1 += testword[i];
+      }
+       document.getElementById("revResult1").innerHTML = result1;
+  }
+                                        </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+<!---------Accordian Menu Script Begins
+                        <script>
+                            var acc = document.getElementsByClassName("accordion");
+                            var i;
+
+                            for (i = 0; i < acc.length; i++) {
+                                acc[i].onclick = function () {
+                                    this.classList.toggle("active");
+                                    var panel = this.nextElementSibling;
+                                    if (panel.style.maxHeight) {
+                                        panel.style.maxHeight = null;
+                                    } else {
+                                        panel.style.maxHeight = panel.scrollHeight + "px";
+                                    }
+                                }
+                            }
+                        </script>
+         <!--------------Accordian Menu Script Ends------------------>
+
+
+
+
+<!--------Extra Section if needed-->
+@*<section class="container-fluid" id="four">
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+                <h2 class="text-center text-primary">Features</h2>
+                <hr>
+                <div class="media wow fadeInRight">
+                    <h3>C#</h3>
+                    <div class="media-body media-middle">
+                        <p>Well versed in the C# developing lamguage.</p>
+                    </div>
+                    <div class="media-right">
+                        <i class="icon-lg ion-ios-bolt-outline"></i>
+                    </div>
+                </div>
+                <hr>
+                <div class="media wow fadeIn">
+                    <h3>JavaScript</h3>
+                    <div class="media-left">
+                        <a href="#alertModal" data-toggle="modal" data-target="#alertModal"><i class="icon-lg ion-ios-cloud-download-outline"></i></a>
+                    </div>
+                    <div class="media-body media-middle">
+                        <p>Great development skills in JS.</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="media wow fadeInRight">
+                    <h3>Unique</h3>
+                    <div class="media-body media-middle">
+                        <p>Designed and developed to your unique taste.</p>
+                    </div>
+                    <div class="media-right">
+                        <i class="icon-lg ion-ios-snowy"></i>
+                    </div>
+                </div>
+                <hr>
+                <div class="media wow fadeIn">
+                    <h3>Popular</h3>
+                    <div class="media-left">
+                        <i class="icon-lg ion-ios-heart-outline"></i>
+                    </div>
+                    <div class="media-body media-middle">
+                        <p>There's good reason why Bootstrap is the most used frontend framework in the world.</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="media wow fadeInRight">
+                    <h3>Tested</h3>
+                    <div class="media-body media-middle">
+                        <p>Bootstrap is matured and well-tested. It's a stable codebase that provides consistency.</p>
+                    </div>
+                    <div class="media-right">
+                        <i class="icon-lg ion-ios-flask-outline"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>*@

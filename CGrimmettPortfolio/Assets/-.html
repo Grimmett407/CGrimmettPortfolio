@@ -1,0 +1,56 @@
+<div class="tab-content">
+<div class="tab-pane" id="primenumber">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div>
+                                        <h1>Prime Number Check</h1>
+                                        <input id="prime" type="number" placeholder="Enter Number" />
+                                        <button id="prime" type="submit" onclick="primeNum()">Test</button>
+                                        <p id="primeresult">The result of the prime check will appear here!</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <pre class="brush: js">
+function primeNum() {
+    var primeNum = Number(document.getElementById("prime").value);
+    var isprime = [];
+    for (i = 2; i < primeNum; i++) {
+        if (primeNum % i == 0) {
+            isprime.push(false);
+        }
+        else {
+            isprime.push(true);
+        }
+    }
+        if (isprime.includes(false)) {
+            document.getElementById("primeresult").innerHTML = primeNum + " is NOT prime number";
+        }
+        else {
+            document.getElementById("primeresult").innerHTML = primeNum + " IS a prime number";
+        }
+}
+                                        </pre>
+                                </div>
+                            </div>
+                        </div>
+	
+	</div>
+	
+	<!--Accordian Menu Script Begins-->
+    <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].onclick = function () {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                }
+            }
+        </script>
+    <!--Accordian Menu Script Ends-->

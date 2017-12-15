@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+
+    <h1>Fizz Buzz</h1>
+    <p><input id="firNum" type="number" placeholder="Enter Number" /></p>
+    <p><input id="secNum" type="number" placeholder="Enter Number" /></p>
+    <p><button onclick="Calc()">Execute</button></p>
+
+    <div id="result">Result</div>
+
+    <script>
+        function Calc() {
+            var firstNumber = Number(document.getElementById("firNum").value);
+            var secondNumber = Number(document.getElementById("secNum").value);
+            var result = " ";
+            for (var i = 1; i <= 100; i++) {
+                if( (i%firstNumber) == 0 && (i%secondNumber) == 0) {
+                    result += ( " FizzBuzz " );
+                } else if( (i%firstNumber) == 0) {
+                    result += ( " Fizz " );
+                } else if( (i%secondNumber) == 0) {
+                    result += ( " Buzz " );
+                } else {
+                    result += i+ " ";
+                }
+        }
+            document.getElementById("result").innerHTML = result;
+        }
+
+    </script>
+
+    <script src="scripts/jquery-1.9.1.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+</body>
+</html>

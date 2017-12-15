@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using CGrimmettPortfolio.Models;
+using Owin.Security.Providers.LinkedIn;
 
 namespace CGrimmettPortfolio
 {
@@ -54,9 +55,13 @@ namespace CGrimmettPortfolio
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseLinkedInAuthentication(
+               clientId: "78f5xei5dkiups",
+               clientSecret: "sEpFkkz3o5pE2euB");
+
+            app.UseFacebookAuthentication(
+               appId: "926932647464215",
+               appSecret: "df806ee1465f1ee9080cee9cacde2732");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <div class="container text-center">
+
+        <div class="col-md-12">
+
+            <div class="col-md-3">
+
+            </div>
+
+            <div class="col-md-3">
+                <h1>Palindrome</h1>
+                <p><input id="testWord" type="text" placeholder="Enter Word" /></p>
+                <p><button class="btn btn-primary" onclick="palindrome(testWord.value)">Execute</button></p>
+                <div id="PalindromeResult"></div>
+            </div>
+
+            <div class="col-md-3">
+                
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <script>
+        function palindrome(myString) {
+
+            /* remove special characters, spaces and make lowercase*/
+            var ChangeChar = myString.replace(/[^A-Z0-9]/ig, "").toLowerCase();
+
+            /* reverse ChangeChar for comparison*/
+            var checkPalindrome = ChangeChar.split('').reverse().join('');
+
+            /* Check to see if myString is a Palindrome*/
+            if (ChangeChar === checkPalindrome) {
+
+                document.getElementById("PalindromeResult").innerHTML = myString + " is a Palindrome.";
+            } else {
+
+                document.getElementById("PalindromeResult").innerHTML = myString + " is NOT a Palindrome.";
+            }
+        }
+    </script>
+
+    <!--the algorithim ^A-Z0-9]/ig is used to siphon through the input word and kick out any character that isn't alpha numerical.  
+        the variable checkPalindrome is compared to our variable ChangeChar, which is our input, after being reversed by the .split('').reverse('').join('') command.
+        if ChangeChar (our input) is equal to checkPalindrome (the input reversed), then it is deemed a Palindrome.
+        if they are NOT equal, it is deemed NOT a Palindrome.-->
+
+    
+    <script src="scripts/jquery-1.9.1.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+
+</body>
+</html>

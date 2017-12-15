@@ -1,44 +1,138 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109655333-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-109655333-1');
+    </script>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>Christian Grimmett</title>
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Codeply">
+    <link rel="stylesheet" href="~/template/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/template/css/animate.min.css" />
+    <link rel="stylesheet" href="~/template/css/ionicons.min.css" />
+    <link href="~/Assets/Unsemantic/unsemantic-grid-responsive-tablet.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/template/css/styles.css" />
+    <link href="~/template/fonts/icomoon/icomoon/style.css" rel="stylesheet" />
+    <link href="~/template/css/fonts.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link href="~/Content/PagedList.css"rel="stylesheet"type="text/css">
+
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+    <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
+                    <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <a class="navbar-brand page-scroll" href="@Url.Action("Index", "Home")"><i class="ion-ios-analytics-outline"></i> C G</a>
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse" id="bs-navbar">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>
+                        <a class="page-scroll" href="#one">Bio</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#two">Languages</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#three">Portfolio</a>
+                    </li>
+                    <li>
+                        @Html.ActionLink("Blog", "Index", "Posts")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Contact", "Contact", "Home")
+                    </li>
                 </ul>
-                @Html.Partial("_LoginPartial")
+                <ul class="nav navbar-nav navbar-right" style="padding-right: 25px;">
+                    @Html.Partial("_LoginPartial")
+                </ul>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+    </nav>
 
+    @RenderBody()
+
+
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="grid-33 column text-center lead">
+                    <h2 style="color:#9c27c1">Contact Information</h2>
+                    <i class="icon-location-pin"> Charlotte, NC</i><br />
+                    <i class="icon-mail"> CGrimmett407@gmail.com</i><br />
+                    <i class="icon-old-phone"> (336)-601-9642</i>
+
+                </div>
+                <div class="grid-33 column text-center lead">
+                    <div class="">
+                        <h2 class="text-primary">Get in contact with me.</h2>
+                    <hr />
+                        <a href="@Url.Action("Contact", "Home")" target="ext" class="btn btn-default btn-lg wow flipInX">Contact Me</a>
+                    </div>                </div>
+
+                <div class="grid-33 text-center">
+                    <h4>Follow</h4>
+                    <ul class="list-inline">
+                        <li><a rel="" href="https://www.linkedin.com/in/nicholas-grimmett-68b547121/" title="Dribble"><i class="icon-lg icon-linkedin-with-circle"></i></a></li>
+                        <li><a rel="nofollow" href="https://www.facebook.com/christian.grimmett.10" title="Facebook"><i class="icon-lg ion-social-facebook-outline"></i></a>&nbsp;</li>
+                        <li><a rel="nofollow" href="" title="Twitter"><i class="icon-lg icon-instagram"></i></a>&nbsp;</li>
+                    </ul>
+                </div>
+            </div>
+            <br />
+        </div>
+    </footer>
+
+    <!--scripts loaded here -->
+    <script src="~/template/js/jquery.min.js"></script>
+    <script src="~/template/js/bootstrap.min.js"></script>
+    <script src="~/template/js/jquery.easing.min.js"></script>
+    <script src="~/template/js/wow.js"></script>
+    <script src="~/template/js/scripts.js"></script>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+<!------------Template Footer(If wanted to use)-->
+@*<hr />*@
+@*<div class="text-center">
+    <footer>
+        <div class="grid container">
+            <div class="grid-33">
+                <div class="lead">
+
+                        <i class="icon-location-pin"> Charlotte, NC</i><br />
+                        <i class="icon-email"> CGrimmett407@gmail.com</i><br />
+                        <abbr title="Phone">P:</abbr>
+                        (336)-601-9642
+
+                </div>
+            </div>
+            <div class="grid-33">
+                <div class="lead">
+                    Social icons
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>*@
