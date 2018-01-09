@@ -16,7 +16,7 @@ using PagedList.Mvc;
 
 namespace CGrimmettPortfolio.Controllers
 {
-    [RequireHttps]
+    //[RequireHttps]
     public class PostsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

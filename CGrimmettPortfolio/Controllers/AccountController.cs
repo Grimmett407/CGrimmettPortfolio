@@ -12,7 +12,7 @@ using CGrimmettPortfolio.Models;
 
 namespace CGrimmettPortfolio.Controllers
 {
-    [RequireHttps]
+    //[RequireHttps]
     [Authorize]
     public class AccountController : Universal
     {

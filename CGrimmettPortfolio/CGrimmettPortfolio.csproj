@@ -397,6 +397,7 @@
     <Compile Include="Models\Post.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Content Include="Assets\Img\IMG_Christian_Grimmett.jpg" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\PagedList.css" />
@@ -476,6 +477,7 @@
     <Content Include="Assets\cgrimmett-portfolio.PublishSettings" />
     <None Include="Properties\PublishProfiles\cgrimmett-portfolio - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\cgrimmett-portfolio - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
